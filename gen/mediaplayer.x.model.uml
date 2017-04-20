@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_aNQGsA_mEee-FJ-BKInLOA" name="mediaplayer">
+    <packageImport xmi:id="_aOn_sA_mEee-FJ-BKInLOA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://TXTUML_STDLIB/stdlib.uml#_DE5UMHLCEeWVx4ZuxFlarQ"/>
+    </packageImport>
+    <packageImport xmi:id="_aSDuMA_mEee-FJ-BKInLOA">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_aZ3mYA_mEee-FJ-BKInLOA" name="Media">
+      <generalization xmi:id="_aa-ZoA_mEee-FJ-BKInLOA" general="_adT78A_mEee-FJ-BKInLOA"/>
+      <ownedAttribute xmi:id="_aZ5bkA_mEee-FJ-BKInLOA" name="timesOpened" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_aZ6CoA_mEee-FJ-BKInLOA" name="title" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_afK9IQ_mEee-FJ-BKInLOA" name="b" type="_acdnYA_mEee-FJ-BKInLOA" association="_afJvAA_mEee-FJ-BKInLOA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_afLkMA_mEee-FJ-BKInLOA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_afLkMQ_mEee-FJ-BKInLOA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_aZ8e4A_mEee-FJ-BKInLOA" name="addMedia" visibility="public"/>
+      <ownedOperation xmi:id="_aaKhUA_mEee-FJ-BKInLOA" name="deleteMedia" visibility="public"/>
+      <ownedOperation xmi:id="_aaLIYA_mEee-FJ-BKInLOA" name="openMedia" visibility="public"/>
+      <ownedOperation xmi:id="_aaLvcA_mEee-FJ-BKInLOA" name="closeMedia" visibility="public"/>
+      <ownedOperation xmi:id="_aaMWgA_mEee-FJ-BKInLOA" name="getInfo" visibility="public"/>
+      <ownedOperation xmi:id="_aaM9kA_mEee-FJ-BKInLOA" name="changeInfo" visibility="public"/>
+      <ownedOperation xmi:id="_aaM9kQ_mEee-FJ-BKInLOA" name="giveRating" visibility="public"/>
+      <ownedOperation xmi:id="_aaPZ0A_mEee-FJ-BKInLOA" name="Media"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_abNqMA_mEee-FJ-BKInLOA" name="imagelist" memberEnd="_acCJkQ_mEee-FJ-BKInLOA _acL6kQ_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_abuAgA_mEee-FJ-BKInLOA" name="loop"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_abvOoA_mEee-FJ-BKInLOA" name="loop" signal="_abuAgA_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_abxq4A_mEee-FJ-BKInLOA" name="#loop_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_ab4_oA_mEee-FJ-BKInLOA" name="loop" specification="_ab1VQA_mEee-FJ-BKInLOA"/>
+      <ownedOperation xmi:id="_ab1VQA_mEee-FJ-BKInLOA" name="loop" isStatic="true" method="_ab4_oA_mEee-FJ-BKInLOA">
+        <ownedParameter xmi:id="_ab3xgA_mEee-FJ-BKInLOA" name="signal" type="_abuAgA_mEee-FJ-BKInLOA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_acCJkA_mEee-FJ-BKInLOA" name="Image">
+      <generalization xmi:id="_acGbAA_mEee-FJ-BKInLOA" general="_aZ3mYA_mEee-FJ-BKInLOA"/>
+      <ownedAttribute xmi:id="_acCJkQ_mEee-FJ-BKInLOA" name="imageplaylist" type="_acL6kA_mEee-FJ-BKInLOA" association="_abNqMA_mEee-FJ-BKInLOA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_acCJkg_mEee-FJ-BKInLOA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_acCJkw_mEee-FJ-BKInLOA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_acCwoA_mEee-FJ-BKInLOA" name="date" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_acDXsA_mEee-FJ-BKInLOA" name="description" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_acDXsQ_mEee-FJ-BKInLOA" name="location" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_acDXsg_mEee-FJ-BKInLOA" name="resolution" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_acD-wA_mEee-FJ-BKInLOA" name="equals" visibility="public"/>
+      <ownedOperation xmi:id="_acD-wQ_mEee-FJ-BKInLOA" name="Image"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_acL6kA_mEee-FJ-BKInLOA" name="ImagePlaylists">
+      <generalization xmi:id="_acPk8A_mEee-FJ-BKInLOA" general="_acVEgA_mEee-FJ-BKInLOA"/>
+      <ownedAttribute xmi:id="_acL6kQ_mEee-FJ-BKInLOA" name="image" type="_acCJkA_mEee-FJ-BKInLOA" aggregation="composite" association="_abNqMA_mEee-FJ-BKInLOA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_acL6kg_mEee-FJ-BKInLOA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_acL6kw_mEee-FJ-BKInLOA" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_acMhoA_mEee-FJ-BKInLOA" name="addImage" visibility="public"/>
+      <ownedOperation xmi:id="_acMhoQ_mEee-FJ-BKInLOA" name="removeImage" visibility="public"/>
+      <ownedOperation xmi:id="_acNIsA_mEee-FJ-BKInLOA" name="moveImage" visibility="public"/>
+      <ownedOperation xmi:id="_acNIsQ_mEee-FJ-BKInLOA" name="copyImage" visibility="public"/>
+      <ownedOperation xmi:id="_acNvwA_mEee-FJ-BKInLOA" name="ImagePlaylists"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_acVEgA_mEee-FJ-BKInLOA" name="Playlists">
+      <ownedAttribute xmi:id="_acVEgQ_mEee-FJ-BKInLOA" name="amountofObjects" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_acVrkA_mEee-FJ-BKInLOA" name="name" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_aeV2sA_mEee-FJ-BKInLOA" name="webstore" type="_ack8IA_mEee-FJ-BKInLOA" association="_aeVPoA_mEee-FJ-BKInLOA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aeV2sQ_mEee-FJ-BKInLOA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aeV2sg_mEee-FJ-BKInLOA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_acVrkQ_mEee-FJ-BKInLOA" name="addPlaylist" visibility="public"/>
+      <ownedOperation xmi:id="_acWSoA_mEee-FJ-BKInLOA" name="deletePlaylist" visibility="public"/>
+      <ownedOperation xmi:id="_acWSoQ_mEee-FJ-BKInLOA" name="openPlaylist" visibility="public"/>
+      <ownedOperation xmi:id="_acWSog_mEee-FJ-BKInLOA" name="closePlaylist" visibility="public"/>
+      <ownedOperation xmi:id="_acW5sA_mEee-FJ-BKInLOA" name="getAmountofObjects" visibility="public"/>
+      <ownedOperation xmi:id="_acW5sQ_mEee-FJ-BKInLOA" name="Playlists"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_acdnYA_mEee-FJ-BKInLOA" name="Artist">
+      <generalization xmi:id="_acgDoA_mEee-FJ-BKInLOA" general="_aem8cA_mEee-FJ-BKInLOA"/>
+      <ownedAttribute xmi:id="_afKWEA_mEee-FJ-BKInLOA" name="a" type="_aZ3mYA_mEee-FJ-BKInLOA" association="_afJvAA_mEee-FJ-BKInLOA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_afKWEQ_mEee-FJ-BKInLOA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_afK9IA_mEee-FJ-BKInLOA" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_aceOcA_mEee-FJ-BKInLOA" name="getSongs" visibility="public"/>
+      <ownedOperation xmi:id="_aceOcQ_mEee-FJ-BKInLOA" name="Artist"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ack8IA_mEee-FJ-BKInLOA" name="Webstore">
+      <ownedAttribute xmi:id="_ad-qUA_mEee-FJ-BKInLOA" name="b" type="_ae4CMA_mEee-FJ-BKInLOA" association="_ad9cMA_mEee-FJ-BKInLOA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ad-qUQ_mEee-FJ-BKInLOA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ad_RYA_mEee-FJ-BKInLOA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_aeMswA_mEee-FJ-BKInLOA" name="director" type="_ae4CMA_mEee-FJ-BKInLOA" association="_aeMFsA_mEee-FJ-BKInLOA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aeMswQ_mEee-FJ-BKInLOA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aeNT0A_mEee-FJ-BKInLOA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_aeWdwA_mEee-FJ-BKInLOA" name="playlist" type="_acVEgA_mEee-FJ-BKInLOA" aggregation="composite" association="_aeVPoA_mEee-FJ-BKInLOA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aeWdwQ_mEee-FJ-BKInLOA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aeXE0A_mEee-FJ-BKInLOA" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_acljMA_mEee-FJ-BKInLOA" name="Webstore"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_acvUMA_mEee-FJ-BKInLOA" name="Video">
+      <generalization xmi:id="_acy-kA_mEee-FJ-BKInLOA" general="_aZ3mYA_mEee-FJ-BKInLOA"/>
+      <ownedAttribute xmi:id="_acvUMQ_mEee-FJ-BKInLOA" name="Duration" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_acvUMg_mEee-FJ-BKInLOA" name="artist" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_acv7QA_mEee-FJ-BKInLOA" name="description" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_acv7QQ_mEee-FJ-BKInLOA" name="genre" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_acv7Qg_mEee-FJ-BKInLOA" name="year" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_af25oA_mEee-FJ-BKInLOA" name="videoplaylist" type="_afQcsA_mEee-FJ-BKInLOA" association="_af2SkA_mEee-FJ-BKInLOA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_af25oQ_mEee-FJ-BKInLOA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_af25og_mEee-FJ-BKInLOA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_acv7Qw_mEee-FJ-BKInLOA" name="palyVideo" visibility="public"/>
+      <ownedOperation xmi:id="_acwiUA_mEee-FJ-BKInLOA" name="pauseVideo" visibility="public"/>
+      <ownedOperation xmi:id="_acwiUQ_mEee-FJ-BKInLOA" name="equals" visibility="public"/>
+      <ownedOperation xmi:id="_acxJYA_mEee-FJ-BKInLOA" name="Video"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_adT78A_mEee-FJ-BKInLOA" name="Mediaplayer" classifierBehavior="_adZbgA_mEee-FJ-BKInLOA">
+      <ownedAttribute xmi:id="_adT78Q_mEee-FJ-BKInLOA" name="loopcondition" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_adZbgA_mEee-FJ-BKInLOA" name="Mediaplayer">
+        <region xmi:id="_adaCkA_mEee-FJ-BKInLOA" name="Mediaplayer">
+          <transition xmi:id="_adgJMA_mEee-FJ-BKInLOA" name="TInitialize" source="_adb3wA_mEee-FJ-BKInLOA" target="_adce0A_mEee-FJ-BKInLOA"/>
+          <transition xmi:id="_adh-YA_mEee-FJ-BKInLOA" name="Preparing_state" source="_adce0A_mEee-FJ-BKInLOA" target="_adce0Q_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_adilcA_mEee-FJ-BKInLOA" name="null_trigger" event="_ae-I0Q_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_adjMgA_mEee-FJ-BKInLOA" name="Ready_state" source="_adce0Q_mEee-FJ-BKInLOA" target="_addF4A_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_adjzkA_mEee-FJ-BKInLOA" name="null_trigger" event="_afpeQQ_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_adkaoA_mEee-FJ-BKInLOA" name="Starting_state" source="_addF4A_mEee-FJ-BKInLOA" target="_adds8A_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_adlBsA_mEee-FJ-BKInLOA" name="null_trigger" event="_afWjUQ_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_adlowA_mEee-FJ-BKInLOA" name="Pausing_state" source="_adds8A_mEee-FJ-BKInLOA" target="_adeUAQ_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_admP0A_mEee-FJ-BKInLOA" name="null_trigger" event="_aefnsQ_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_adm24A_mEee-FJ-BKInLOA" name="Stopped_state" source="_adds8A_mEee-FJ-BKInLOA" target="_ade7EA_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_adnd8A_mEee-FJ-BKInLOA" name="null_trigger" event="_af7LEQ_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_adoFAA_mEee-FJ-BKInLOA" name="A6" source="_adds8A_mEee-FJ-BKInLOA" target="_adfiIA_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_adosEA_mEee-FJ-BKInLOA" name="null_trigger" event="_afj-sQ_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_adpTIA_mEee-FJ-BKInLOA" name="A7" source="_adfiIA_mEee-FJ-BKInLOA" target="_adds8A_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_adp6MA_mEee-FJ-BKInLOA" name="null_trigger" event="_afWjUQ_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_adp6MQ_mEee-FJ-BKInLOA" name="stopped_preparing_state" source="_ade7EA_mEee-FJ-BKInLOA" target="_adce0Q_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_adqhQA_mEee-FJ-BKInLOA" name="null_trigger" event="_ae-I0Q_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_adrIUA_mEee-FJ-BKInLOA" name="A9" source="_adfiIA_mEee-FJ-BKInLOA" target="_ade7EA_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_adrvYA_mEee-FJ-BKInLOA" name="null_trigger" event="_aeavMA_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_adsWcA_mEee-FJ-BKInLOA" name="pause_stopped_state" source="_adeUAQ_mEee-FJ-BKInLOA" target="_ade7EA_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_ads9gA_mEee-FJ-BKInLOA" name="null_trigger" event="_aeavMA_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_adtkkA_mEee-FJ-BKInLOA" name="pause_started_state" source="_adeUAQ_mEee-FJ-BKInLOA" target="_adds8A_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_adtkkQ_mEee-FJ-BKInLOA" name="null_trigger" event="_afWjUQ_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_aduLoA_mEee-FJ-BKInLOA" name="Stopped_prepared_state" source="_ade7EA_mEee-FJ-BKInLOA" target="_addF4A_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_aduysA_mEee-FJ-BKInLOA" name="null_trigger" event="_afpeQQ_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_advZwA_mEee-FJ-BKInLOA" name="prepared_stopped_state" source="_addF4A_mEee-FJ-BKInLOA" target="_ade7EA_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_adwA0A_mEee-FJ-BKInLOA" name="null_trigger" event="_aeavMA_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_adwA0Q_mEee-FJ-BKInLOA" name="Started_state" source="_adds8A_mEee-FJ-BKInLOA" target="_adds8A_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_adwn4A_mEee-FJ-BKInLOA" name="null_trigger" event="_afWjUQ_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_adxO8A_mEee-FJ-BKInLOA" name="Palyback_state" source="_adfiIA_mEee-FJ-BKInLOA" target="_adfiIA_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_adx2AA_mEee-FJ-BKInLOA" name="loop_trigger" event="_abvOoA_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_adx2AQ_mEee-FJ-BKInLOA" name="Pause_state" source="_adeUAQ_mEee-FJ-BKInLOA" target="_adeUAQ_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_adydEA_mEee-FJ-BKInLOA" name="loop_trigger" event="_abvOoA_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_adzEIA_mEee-FJ-BKInLOA" name="Prepared_state" source="_addF4A_mEee-FJ-BKInLOA" target="_addF4A_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_adzEIQ_mEee-FJ-BKInLOA" name="null_trigger" event="_afpeQQ_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_adzrMA_mEee-FJ-BKInLOA" name="Ended_State" source="_adds8A_mEee-FJ-BKInLOA" target="_adeUAA_mEee-FJ-BKInLOA">
+            <trigger xmi:id="_ad0SQA_mEee-FJ-BKInLOA" name="null_trigger" event="_agOGAQ_mEee-FJ-BKInLOA"/>
+          </transition>
+          <transition xmi:id="_ad0SQQ_mEee-FJ-BKInLOA" name="Started_Again" source="_adeUAA_mEee-FJ-BKInLOA" target="_adds8A_mEee-FJ-BKInLOA"/>
+          <transition xmi:id="_ad05UA_mEee-FJ-BKInLOA" name="switch_ended_prepared" source="_adeUAA_mEee-FJ-BKInLOA" target="_addF4A_mEee-FJ-BKInLOA"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_adb3wA_mEee-FJ-BKInLOA" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_adce0A_mEee-FJ-BKInLOA" name="Initialized"/>
+          <subvertex xmi:type="uml:State" xmi:id="_adce0Q_mEee-FJ-BKInLOA" name="Preparing"/>
+          <subvertex xmi:type="uml:State" xmi:id="_addF4A_mEee-FJ-BKInLOA" name="Prepared"/>
+          <subvertex xmi:type="uml:State" xmi:id="_adds8A_mEee-FJ-BKInLOA" name="Started"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_adeUAA_mEee-FJ-BKInLOA" name="check_looping" kind="choice"/>
+          <subvertex xmi:type="uml:State" xmi:id="_adeUAQ_mEee-FJ-BKInLOA" name="Paused"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ade7EA_mEee-FJ-BKInLOA" name="Stopped"/>
+          <subvertex xmi:type="uml:State" xmi:id="_adfiIA_mEee-FJ-BKInLOA" name="Playback"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_adUjAA_mEee-FJ-BKInLOA" name="Mediaplayer"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ad9cMA_mEee-FJ-BKInLOA" name="wea" memberEnd="_ae4pQA_mEee-FJ-BKInLOA _ad-qUA_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_aeCUsA_mEee-FJ-BKInLOA" name="pause"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_aeC7wA_mEee-FJ-BKInLOA" name="pause" signal="_aeCUsA_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_aeC7wQ_mEee-FJ-BKInLOA" name="#pause_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_aeEw8Q_mEee-FJ-BKInLOA" name="pause" specification="_aeC7wg_mEee-FJ-BKInLOA"/>
+      <ownedOperation xmi:id="_aeC7wg_mEee-FJ-BKInLOA" name="pause" isStatic="true" method="_aeEw8Q_mEee-FJ-BKInLOA">
+        <ownedParameter xmi:id="_aeEw8A_mEee-FJ-BKInLOA" name="signal" type="_aeCUsA_mEee-FJ-BKInLOA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_aeMFsA_mEee-FJ-BKInLOA" name="directd" memberEnd="_aeMswA_mEee-FJ-BKInLOA _ae4pQw_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_aeVPoA_mEee-FJ-BKInLOA" name="webplaylist" memberEnd="_aeV2sA_mEee-FJ-BKInLOA _aeWdwA_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_aeaIIA_mEee-FJ-BKInLOA" name="stop"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_aeavMA_mEee-FJ-BKInLOA" name="stop" signal="_aeaIIA_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_aeavMQ_mEee-FJ-BKInLOA" name="#stop_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_aeckYQ_mEee-FJ-BKInLOA" name="stop" specification="_aeavMg_mEee-FJ-BKInLOA"/>
+      <ownedOperation xmi:id="_aeavMg_mEee-FJ-BKInLOA" name="stop" isStatic="true" method="_aeckYQ_mEee-FJ-BKInLOA">
+        <ownedParameter xmi:id="_aeckYA_mEee-FJ-BKInLOA" name="signal" type="_aeaIIA_mEee-FJ-BKInLOA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_aefnsA_mEee-FJ-BKInLOA" name="pausing"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_aefnsQ_mEee-FJ-BKInLOA" name="pausing" signal="_aefnsA_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_aegOwA_mEee-FJ-BKInLOA" name="#pausing_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_aeiD8Q_mEee-FJ-BKInLOA" name="pausing" specification="_aegOwQ_mEee-FJ-BKInLOA"/>
+      <ownedOperation xmi:id="_aegOwQ_mEee-FJ-BKInLOA" name="pausing" isStatic="true" method="_aeiD8Q_mEee-FJ-BKInLOA">
+        <ownedParameter xmi:id="_aeiD8A_mEee-FJ-BKInLOA" name="signal" type="_aefnsA_mEee-FJ-BKInLOA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_aem8cA_mEee-FJ-BKInLOA" name="Person">
+      <ownedAttribute xmi:id="_aem8cQ_mEee-FJ-BKInLOA" name="name" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_aem8cg_mEee-FJ-BKInLOA" name="getName" visibility="public"/>
+      <ownedOperation xmi:id="_aenjgA_mEee-FJ-BKInLOA" name="Person"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_aewtcA_mEee-FJ-BKInLOA" name="Audio">
+      <generalization xmi:id="_aezwwA_mEee-FJ-BKInLOA" general="_aZ3mYA_mEee-FJ-BKInLOA"/>
+      <ownedAttribute xmi:id="_aewtcQ_mEee-FJ-BKInLOA" name="Duration" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_aewtcg_mEee-FJ-BKInLOA" name="album" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_aexUgA_mEee-FJ-BKInLOA" name="artist" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_aexUgQ_mEee-FJ-BKInLOA" name="genre" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_aexUgg_mEee-FJ-BKInLOA" name="year" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_agHYUQ_mEee-FJ-BKInLOA" name="audioplaylist" type="_afdRAA_mEee-FJ-BKInLOA" association="_agHYUA_mEee-FJ-BKInLOA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_agH_YA_mEee-FJ-BKInLOA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_agH_YQ_mEee-FJ-BKInLOA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_aexUgw_mEee-FJ-BKInLOA" name="equals" visibility="public"/>
+      <ownedOperation xmi:id="_aex7kA_mEee-FJ-BKInLOA" name="playAudio" visibility="public"/>
+      <ownedOperation xmi:id="_aex7kQ_mEee-FJ-BKInLOA" name="pauseAudio" visibility="public"/>
+      <ownedOperation xmi:id="_aeyioA_mEee-FJ-BKInLOA" name="Audio"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ae4CMA_mEee-FJ-BKInLOA" name="Director">
+      <generalization xmi:id="_ae6ecA_mEee-FJ-BKInLOA" general="_aem8cA_mEee-FJ-BKInLOA"/>
+      <ownedAttribute xmi:id="_ae4pQA_mEee-FJ-BKInLOA" name="a" type="_ack8IA_mEee-FJ-BKInLOA" association="_ad9cMA_mEee-FJ-BKInLOA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ae4pQQ_mEee-FJ-BKInLOA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ae4pQg_mEee-FJ-BKInLOA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ae4pQw_mEee-FJ-BKInLOA" name="webstore" type="_ack8IA_mEee-FJ-BKInLOA" association="_aeMFsA_mEee-FJ-BKInLOA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ae4pRA_mEee-FJ-BKInLOA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ae4pRQ_mEee-FJ-BKInLOA" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_ae4pRg_mEee-FJ-BKInLOA" name="Director"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_ae-I0A_mEee-FJ-BKInLOA" name="prepareAsyn"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_ae-I0Q_mEee-FJ-BKInLOA" name="prepareAsyn" signal="_ae-I0A_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ae-I0g_mEee-FJ-BKInLOA" name="#prepareAsyn_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_afAlEA_mEee-FJ-BKInLOA" name="prepareAsyn" specification="_ae-v4A_mEee-FJ-BKInLOA"/>
+      <ownedOperation xmi:id="_ae-v4A_mEee-FJ-BKInLOA" name="prepareAsyn" isStatic="true" method="_afAlEA_mEee-FJ-BKInLOA">
+        <ownedParameter xmi:id="_ae_-AA_mEee-FJ-BKInLOA" name="signal" type="_ae-I0A_mEee-FJ-BKInLOA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_afJvAA_mEee-FJ-BKInLOA" name="Med" memberEnd="_afKWEA_mEee-FJ-BKInLOA _afK9IQ_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_afQcsA_mEee-FJ-BKInLOA" name="VideoPlaylists">
+      <generalization xmi:id="_afTgAA_mEee-FJ-BKInLOA" general="_acVEgA_mEee-FJ-BKInLOA"/>
+      <ownedAttribute xmi:id="_af3gsA_mEee-FJ-BKInLOA" name="video" type="_acvUMA_mEee-FJ-BKInLOA" aggregation="composite" association="_af2SkA_mEee-FJ-BKInLOA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_af3gsQ_mEee-FJ-BKInLOA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_af4HwA_mEee-FJ-BKInLOA" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_afRDwA_mEee-FJ-BKInLOA" name="addVideo" visibility="public"/>
+      <ownedOperation xmi:id="_afRDwQ_mEee-FJ-BKInLOA" name="removeVideo" visibility="public"/>
+      <ownedOperation xmi:id="_afRq0A_mEee-FJ-BKInLOA" name="moveVideo" visibility="public"/>
+      <ownedOperation xmi:id="_afRq0Q_mEee-FJ-BKInLOA" name="copyVideo" visibility="public"/>
+      <ownedOperation xmi:id="_afRq0g_mEee-FJ-BKInLOA" name="VideoPlaylists"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_afWjUA_mEee-FJ-BKInLOA" name="start"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_afWjUQ_mEee-FJ-BKInLOA" name="start" signal="_afWjUA_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_afWjUg_mEee-FJ-BKInLOA" name="#start_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_afYYgQ_mEee-FJ-BKInLOA" name="start" specification="_afXKYA_mEee-FJ-BKInLOA"/>
+      <ownedOperation xmi:id="_afXKYA_mEee-FJ-BKInLOA" name="start" isStatic="true" method="_afYYgQ_mEee-FJ-BKInLOA">
+        <ownedParameter xmi:id="_afYYgA_mEee-FJ-BKInLOA" name="signal" type="_afWjUA_mEee-FJ-BKInLOA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_afdRAA_mEee-FJ-BKInLOA" name="audioPlaylists">
+      <generalization xmi:id="_afgUUA_mEee-FJ-BKInLOA" general="_acVEgA_mEee-FJ-BKInLOA"/>
+      <ownedAttribute xmi:id="_agImcA_mEee-FJ-BKInLOA" name="audio" type="_aewtcA_mEee-FJ-BKInLOA" aggregation="composite" association="_agHYUA_mEee-FJ-BKInLOA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_agImcQ_mEee-FJ-BKInLOA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_agImcg_mEee-FJ-BKInLOA" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_afd4EA_mEee-FJ-BKInLOA" name="addAudio" visibility="public"/>
+      <ownedOperation xmi:id="_afd4EQ_mEee-FJ-BKInLOA" name="removeAudio" visibility="public"/>
+      <ownedOperation xmi:id="_afd4Eg_mEee-FJ-BKInLOA" name="moveAudio" visibility="public"/>
+      <ownedOperation xmi:id="_afefIA_mEee-FJ-BKInLOA" name="copyAudio" visibility="public"/>
+      <ownedOperation xmi:id="_afefIQ_mEee-FJ-BKInLOA" name="audioPlaylists"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_afj-sA_mEee-FJ-BKInLOA" name="playback"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_afj-sQ_mEee-FJ-BKInLOA" name="playback" signal="_afj-sA_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_afj-sg_mEee-FJ-BKInLOA" name="#playback_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_afma8Q_mEee-FJ-BKInLOA" name="playback" specification="_afklwA_mEee-FJ-BKInLOA"/>
+      <ownedOperation xmi:id="_afklwA_mEee-FJ-BKInLOA" name="playback" isStatic="true" method="_afma8Q_mEee-FJ-BKInLOA">
+        <ownedParameter xmi:id="_afma8A_mEee-FJ-BKInLOA" name="signal" type="_afj-sA_mEee-FJ-BKInLOA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_afpeQA_mEee-FJ-BKInLOA" name="ready"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_afpeQQ_mEee-FJ-BKInLOA" name="ready" signal="_afpeQA_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_afqFUA_mEee-FJ-BKInLOA" name="#ready_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_afr6gQ_mEee-FJ-BKInLOA" name="ready" specification="_afqFUQ_mEee-FJ-BKInLOA"/>
+      <ownedOperation xmi:id="_afqFUQ_mEee-FJ-BKInLOA" name="ready" isStatic="true" method="_afr6gQ_mEee-FJ-BKInLOA">
+        <ownedParameter xmi:id="_afr6gA_mEee-FJ-BKInLOA" name="signal" type="_afpeQA_mEee-FJ-BKInLOA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_af2SkA_mEee-FJ-BKInLOA" name="videolist" memberEnd="_af25oA_mEee-FJ-BKInLOA _af3gsA_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_af7LEA_mEee-FJ-BKInLOA" name="stopped"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_af7LEQ_mEee-FJ-BKInLOA" name="stopped" signal="_af7LEA_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_af7yIA_mEee-FJ-BKInLOA" name="#stopped_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_af9nUA_mEee-FJ-BKInLOA" name="stopped" specification="_af7yIQ_mEee-FJ-BKInLOA"/>
+      <ownedOperation xmi:id="_af7yIQ_mEee-FJ-BKInLOA" name="stopped" isStatic="true" method="_af9nUA_mEee-FJ-BKInLOA">
+        <ownedParameter xmi:id="_af9AQA_mEee-FJ-BKInLOA" name="signal" type="_af7LEA_mEee-FJ-BKInLOA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_agHYUA_mEee-FJ-BKInLOA" name="audiolist" memberEnd="_agHYUQ_mEee-FJ-BKInLOA _agImcA_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_agOGAA_mEee-FJ-BKInLOA" name="ended"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_agOGAQ_mEee-FJ-BKInLOA" name="ended" signal="_agOGAA_mEee-FJ-BKInLOA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_agOGAg_mEee-FJ-BKInLOA" name="#ended_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_agP7MQ_mEee-FJ-BKInLOA" name="ended" specification="_agOtEA_mEee-FJ-BKInLOA"/>
+      <ownedOperation xmi:id="_agOtEA_mEee-FJ-BKInLOA" name="ended" isStatic="true" method="_agP7MQ_mEee-FJ-BKInLOA">
+        <ownedParameter xmi:id="_agP7MA_mEee-FJ-BKInLOA" name="signal" type="_agOGAA_mEee-FJ-BKInLOA"/>
+      </ownedOperation>
+    </packagedElement>
+    <profileApplication xmi:id="_aSLqAA_mEee-FJ-BKInLOA">
+      <eAnnotations xmi:id="_aSPUYA_mEee-FJ-BKInLOA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <standard:Create xmi:id="_aa12wA_mEee-FJ-BKInLOA" base_BehavioralFeature="_aaPZ0A_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_ab2jYA_mEee-FJ-BKInLOA" base_BehavioralFeature="_ab1VQA_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_acEl0A_mEee-FJ-BKInLOA" base_BehavioralFeature="_acD-wQ_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_acNvwQ_mEee-FJ-BKInLOA" base_BehavioralFeature="_acNvwA_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_acXgwA_mEee-FJ-BKInLOA" base_BehavioralFeature="_acW5sQ_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_ace1gA_mEee-FJ-BKInLOA" base_BehavioralFeature="_aceOcQ_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_acljMQ_mEee-FJ-BKInLOA" base_BehavioralFeature="_acljMA_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_acxJYQ_mEee-FJ-BKInLOA" base_BehavioralFeature="_acxJYA_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_adVKEA_mEee-FJ-BKInLOA" base_BehavioralFeature="_adUjAA_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_aeDi0A_mEee-FJ-BKInLOA" base_BehavioralFeature="_aeC7wg_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_aebWQA_mEee-FJ-BKInLOA" base_BehavioralFeature="_aeavMg_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_aeg10A_mEee-FJ-BKInLOA" base_BehavioralFeature="_aegOwQ_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_aeoKkA_mEee-FJ-BKInLOA" base_BehavioralFeature="_aenjgA_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_aeyioQ_mEee-FJ-BKInLOA" base_BehavioralFeature="_aeyioA_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_ae5QUA_mEee-FJ-BKInLOA" base_BehavioralFeature="_ae4pRg_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_ae-v4Q_mEee-FJ-BKInLOA" base_BehavioralFeature="_ae-v4A_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_afSR4A_mEee-FJ-BKInLOA" base_BehavioralFeature="_afRq0g_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_afXKYQ_mEee-FJ-BKInLOA" base_BehavioralFeature="_afXKYA_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_affGMA_mEee-FJ-BKInLOA" base_BehavioralFeature="_afefIQ_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_aflM0A_mEee-FJ-BKInLOA" base_BehavioralFeature="_afklwA_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_afqsYA_mEee-FJ-BKInLOA" base_BehavioralFeature="_afqFUQ_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_af8ZMA_mEee-FJ-BKInLOA" base_BehavioralFeature="_af7yIQ_mEee-FJ-BKInLOA"/>
+  <standard:Create xmi:id="_agOtEQ_mEee-FJ-BKInLOA" base_BehavioralFeature="_agOtEA_mEee-FJ-BKInLOA"/>
+</xmi:XMI>

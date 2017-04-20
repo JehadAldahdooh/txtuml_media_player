@@ -1,0 +1,61 @@
+package mediaplayer.x.model;
+
+signal LampOn;
+signal LampOff;
+signal Lampause;
+signal Lamps;
+class Lamp {
+	initial Init;
+	state Off;
+	state On;
+	
+
+ state pau;
+	transition Initialize {
+		from Init;
+		to Off;
+	}
+		transition Switchstop {
+		from pau;
+		to Off;
+		trigger Lamps;
+		effect {
+			this ->(mlamp.mp).selectAny().gui.mediaOff();
+		}
+	}
+	
+	transition Switchsstop {
+		from On;
+		to Off;
+		trigger Lamps;
+		effect {
+			this ->(mlamp.mp).selectAny().gui.mediaOff();
+		}
+	}
+	
+	transition SwitchOn {
+		from Off;
+		to On;
+		trigger LampOn;
+		effect {
+			this ->(mlamp.mp).selectAny().gui.mediaOn();
+		}
+	}
+	transition Switchpause {
+		from On;
+		to pau;
+		trigger Lampause;
+		effect {
+			this->(mlamp.mp).selectAny().gui.mediapause();			
+		}
+	}
+
+	transition SwitchOff {
+		from On;
+		to Off;
+		trigger LampOff;
+		effect {
+			this->(mlamp.mp).selectAny().gui.mediaOff();			
+		}
+	}
+}

@@ -1,0 +1,142 @@
+package mediaplayer.x.model;
+
+import java.util.Date;
+
+class Media extends Mediaplayer{
+	String title;
+	int timesOpened;
+    public void addMedia(){}
+    public void deleteMedia(){}
+    public void openMedia(){}
+    public void closeMedia(){}
+    public void getInfo(){}
+    public void changeInfo(){}
+    public void giveRating(){}
+	
+}
+
+class Image extends Media{
+	String resolution;
+	int date;
+	String location;
+	String description;
+	public void equals(){}
+}
+
+class Video extends Media{
+	String artist;
+	String Duration;
+	String genre;
+	String description;
+	int year;
+	public void palyVideo(){}
+    public void pauseVideo(){}
+    public void equals(){}
+
+}
+
+class Director extends Person{
+	
+}
+
+class Audio extends Media{
+	String artist;
+	String album;
+	String genre;
+	int Duration;
+	int year;
+    public void equals(){}
+    public void playAudio(){}
+    public void pauseAudio(){}
+}
+
+class Artist extends Person{
+	public void getSongs(){}	
+}
+
+class Playlists{
+	String name;
+	int amountofObjects;
+    public void addPlaylist(){}
+    public void deletePlaylist(){}
+    public void openPlaylist(){}
+    public void closePlaylist(){}
+    public void getAmountofObjects(){}	
+}
+
+class ImagePlaylists extends Playlists {
+	public void addImage(){	}
+    public void removeImage(){}
+    public void moveImage(){}
+    public void copyImage(){}
+
+}
+
+class VideoPlaylists extends Playlists {
+	public void addVideo(){	}
+    public void removeVideo(){}
+    public void moveVideo(){}
+    public void copyVideo(){}
+}
+
+
+class audioPlaylists extends Playlists {
+	public void addAudio(){}
+    public void removeAudio(){}
+    public void moveAudio(){}
+    public void copyAudio(){}
+
+	
+}
+class Person{
+	String name;
+	public void getName(){}
+}
+
+composition audiolist {
+  container audioPlaylists audioplaylist;
+  1..* Audio audio;
+}
+
+composition videolist {
+  container VideoPlaylists videoplaylist;
+  0..* Video video;
+}
+
+composition imagelist {
+  container ImagePlaylists imageplaylist;
+  0..* Image image;
+}
+
+association Med {
+	* Media a;
+    1 Artist b;
+}
+
+
+association directd {
+	1 Director director;
+    0..* Webstore webstore;
+}
+
+
+association wea {
+	1 Webstore a;
+    1 Director b;
+}
+
+composition webplaylist {
+  container Webstore webstore;
+  0..* Playlists playlist;
+}
+
+class Webstore{
+		
+}
+
+
+
+
+
+
+
