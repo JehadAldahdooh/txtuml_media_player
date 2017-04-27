@@ -1,0 +1,143 @@
+2017-04-20 16:10:09 EXEC TRACE - Model executor started.
+2017-04-20 16:10:10 EXEC TRACE - Lamp@obj1 leaves initial:Init
+2017-04-20 16:10:10 EXEC TRACE - Lamp@obj1 uses transition:Initialize
+2017-04-20 16:10:10 EXEC TRACE - Lamp@obj1 enters state:Off
+2017-04-20 16:10:10 EXEC TRACE - Lamp@obj8 leaves initial:Init
+2017-04-20 16:10:10 EXEC TRACE - Lamp@obj8 uses transition:Initialize
+2017-04-20 16:10:10 EXEC TRACE - Lamp@obj8 enters state:Off
+2017-04-20 16:10:10 EXEC TRACE - Lamp@obj10 leaves initial:Init
+2017-04-20 16:10:10 EXEC TRACE - Lamp@obj10 uses transition:Initialize
+2017-04-20 16:10:10 EXEC TRACE - Lamp@obj10 enters state:Off
+2017-04-20 16:10:10 EXEC TRACE - Lamp@obj14 leaves initial:Init
+2017-04-20 16:10:10 EXEC TRACE - Lamp@obj14 uses transition:Initialize
+2017-04-20 16:10:10 EXEC TRACE - Lamp@obj14 enters state:Off
+2017-04-20 16:10:10 EXEC TRACE - Lamp@obj16 leaves initial:Init
+2017-04-20 16:10:10 EXEC TRACE - Lamp@obj16 uses transition:Initialize
+2017-04-20 16:10:10 EXEC TRACE - Lamp@obj16 enters state:Off
+2017-04-20 16:10:10 EXEC TRACE - Mediaplayer@obj15 leaves initial:Init
+2017-04-20 16:10:10 EXEC TRACE - Mediaplayer@obj15 uses transition:TInitialize
+2017-04-20 16:10:10 USER  INFO - Mediaplayer in Initialized state 
+2017-04-20 16:10:10 EXEC TRACE - Mediaplayer@obj15 enters state:Initialized
+2017-04-20 16:10:41 EXEC TRACE - Mediaplayer@obj15 processes signal:prepareAsyn
+2017-04-20 16:10:41 EXEC TRACE - Mediaplayer@obj15 leaves state:Initialized
+2017-04-20 16:10:41 EXEC TRACE - Mediaplayer@obj15 uses transition:Preparing_state
+2017-04-20 16:10:41 USER  INFO - Mediaplayer in Preparing State
+2017-04-20 16:10:41 EXEC TRACE - Mediaplayer@obj15 enters state:Preparing
+2017-04-20 16:10:41 EXEC TRACE - Mediaplayer@obj15 processes signal:ready
+2017-04-20 16:10:41 EXEC TRACE - Mediaplayer@obj15 leaves state:Preparing
+2017-04-20 16:10:41 EXEC TRACE - Mediaplayer@obj15 uses transition:Ready_state
+2017-04-20 16:10:41 USER  INFO - Mediaplayer in Ready state
+2017-04-20 16:10:41 EXEC TRACE - Mediaplayer@obj15 enters state:Prepared
+2017-04-20 16:10:44 EXEC TRACE - Mediaplayer@obj15 processes signal:start
+2017-04-20 16:10:44 EXEC TRACE - Mediaplayer@obj15 leaves state:Prepared
+2017-04-20 16:10:44 EXEC TRACE - Mediaplayer@obj15 uses transition:Starting_state
+2017-04-20 16:10:44 EXEC TRACE - Mediaplayer@obj15 enters state:Started
+2017-04-20 16:10:44 EXEC TRACE - Lamp@obj16 processes signal:LampOn
+2017-04-20 16:10:44 EXEC TRACE - Lamp@obj16 leaves state:Off
+2017-04-20 16:10:44 EXEC TRACE - Lamp@obj16 uses transition:SwitchOn
+2017-04-20 16:10:44 EXEC TRACE - Lamp@obj16 enters state:On
+2017-04-20 16:11:07 EXEC TRACE - Mediaplayer@obj15 processes signal:pause
+2017-04-20 16:11:07 EXEC TRACE - Mediaplayer@obj15 leaves state:Started
+2017-04-20 16:11:07 EXEC TRACE - Mediaplayer@obj15 uses transition:Pausing_state
+2017-04-20 16:11:07 USER  INFO - Mediaplayer in Pausing state
+2017-04-20 16:11:07 EXEC TRACE - Mediaplayer@obj15 enters state:Paused
+2017-04-20 16:11:07 EXEC TRACE - Lamp@obj16 processes signal:Lampause
+2017-04-20 16:11:07 EXEC TRACE - Lamp@obj16 leaves state:On
+2017-04-20 16:11:07 EXEC TRACE - Lamp@obj16 uses transition:Switchpause
+2017-04-20 16:11:07 EXEC TRACE - Lamp@obj16 enters state:pau
+2017-04-20 16:11:12 EXEC TRACE - Mediaplayer@obj15 processes signal:stop
+2017-04-20 16:11:12 EXEC TRACE - Mediaplayer@obj15 leaves state:Paused
+2017-04-20 16:11:12 EXEC TRACE - Mediaplayer@obj15 uses transition:pause_stopped_state
+2017-04-20 16:11:12 USER  INFO - Mediaplayer in Pausing-Stopped state
+2017-04-20 16:11:12 EXEC TRACE - Mediaplayer@obj15 enters state:Stopped
+2017-04-20 16:11:12 EXEC TRACE - Lamp@obj16 processes signal:Lamps
+2017-04-20 16:11:12 EXEC TRACE - Lamp@obj16 leaves state:pau
+2017-04-20 16:11:12 EXEC TRACE - Lamp@obj16 uses transition:Switchstop
+2017-04-20 16:11:12 EXEC TRACE - Lamp@obj16 enters state:Off
+2017-04-20 16:59:48 EXEC TRACE - Mediaplayer@obj15 processes signal:prepareAsyn
+2017-04-20 16:59:48 EXEC TRACE - Mediaplayer@obj15 leaves state:Stopped
+2017-04-20 16:59:48 EXEC TRACE - Mediaplayer@obj15 uses transition:stopped_preparing_state
+2017-04-20 16:59:48 USER  INFO - Mediaplayer in prepareasync state
+2017-04-20 16:59:48 EXEC TRACE - Mediaplayer@obj15 enters state:Preparing
+2017-04-20 16:59:48 EXEC TRACE - Mediaplayer@obj15 processes signal:ready
+2017-04-20 16:59:48 EXEC TRACE - Mediaplayer@obj15 leaves state:Preparing
+2017-04-20 16:59:48 EXEC TRACE - Mediaplayer@obj15 uses transition:Ready_state
+2017-04-20 16:59:48 USER  INFO - Mediaplayer in Ready state
+2017-04-20 16:59:48 EXEC TRACE - Mediaplayer@obj15 enters state:Prepared
+2017-04-20 16:59:49 EXEC TRACE - Mediaplayer@obj15 processes signal:start
+2017-04-20 16:59:49 EXEC TRACE - Mediaplayer@obj15 leaves state:Prepared
+2017-04-20 16:59:49 EXEC TRACE - Mediaplayer@obj15 uses transition:Starting_state
+2017-04-20 16:59:49 EXEC TRACE - Mediaplayer@obj15 enters state:Started
+2017-04-20 16:59:49 EXEC TRACE - Lamp@obj16 processes signal:LampOn
+2017-04-20 16:59:49 EXEC TRACE - Lamp@obj16 leaves state:Off
+2017-04-20 16:59:49 EXEC TRACE - Lamp@obj16 uses transition:SwitchOn
+2017-04-20 16:59:49 EXEC TRACE - Lamp@obj16 enters state:On
+2017-04-20 16:59:54 EXEC TRACE - Mediaplayer@obj15 processes signal:stop
+2017-04-20 16:59:54 EXEC TRACE - Mediaplayer@obj15 leaves state:Started
+2017-04-20 16:59:54 EXEC TRACE - Mediaplayer@obj15 uses transition:Stopped_state
+2017-04-20 16:59:54 USER  INFO - Mediaplayer in stopped state
+2017-04-20 16:59:54 EXEC TRACE - Mediaplayer@obj15 enters state:Stopped
+2017-04-20 16:59:54 EXEC TRACE - Lamp@obj16 processes signal:Lamps
+2017-04-20 16:59:54 EXEC TRACE - Lamp@obj16 leaves state:On
+2017-04-20 16:59:54 EXEC TRACE - Lamp@obj16 uses transition:Switchsstop
+2017-04-20 16:59:54 EXEC TRACE - Lamp@obj16 enters state:Off
+2017-04-20 16:59:57 EXEC TRACE - Mediaplayer@obj15 processes signal:prepareAsyn
+2017-04-20 16:59:57 EXEC TRACE - Mediaplayer@obj15 leaves state:Stopped
+2017-04-20 16:59:57 EXEC TRACE - Mediaplayer@obj15 uses transition:stopped_preparing_state
+2017-04-20 16:59:57 USER  INFO - Mediaplayer in prepareasync state
+2017-04-20 16:59:57 EXEC TRACE - Mediaplayer@obj15 enters state:Preparing
+2017-04-20 16:59:57 EXEC TRACE - Mediaplayer@obj15 processes signal:ready
+2017-04-20 16:59:57 EXEC TRACE - Mediaplayer@obj15 leaves state:Preparing
+2017-04-20 16:59:57 EXEC TRACE - Mediaplayer@obj15 uses transition:Ready_state
+2017-04-20 16:59:57 USER  INFO - Mediaplayer in Ready state
+2017-04-20 16:59:57 EXEC TRACE - Mediaplayer@obj15 enters state:Prepared
+2017-04-20 16:59:59 EXEC TRACE - Mediaplayer@obj15 processes signal:start
+2017-04-20 16:59:59 EXEC TRACE - Mediaplayer@obj15 leaves state:Prepared
+2017-04-20 16:59:59 EXEC TRACE - Mediaplayer@obj15 uses transition:Starting_state
+2017-04-20 16:59:59 EXEC TRACE - Mediaplayer@obj15 enters state:Started
+2017-04-20 16:59:59 EXEC TRACE - Lamp@obj16 processes signal:LampOn
+2017-04-20 16:59:59 EXEC TRACE - Lamp@obj16 leaves state:Off
+2017-04-20 16:59:59 EXEC TRACE - Lamp@obj16 uses transition:SwitchOn
+2017-04-20 16:59:59 EXEC TRACE - Lamp@obj16 enters state:On
+2017-04-20 17:00:05 EXEC TRACE - Mediaplayer@obj15 processes signal:pause
+2017-04-20 17:00:05 EXEC TRACE - Mediaplayer@obj15 leaves state:Started
+2017-04-20 17:00:05 EXEC TRACE - Mediaplayer@obj15 uses transition:Pausing_state
+2017-04-20 17:00:05 USER  INFO - Mediaplayer in Pausing state
+2017-04-20 17:00:05 EXEC TRACE - Mediaplayer@obj15 enters state:Paused
+2017-04-20 17:00:05 EXEC TRACE - Lamp@obj16 processes signal:Lampause
+2017-04-20 17:00:05 EXEC TRACE - Lamp@obj16 leaves state:On
+2017-04-20 17:00:05 EXEC TRACE - Lamp@obj16 uses transition:Switchpause
+2017-04-20 17:00:05 EXEC TRACE - Lamp@obj16 enters state:pau
+2017-04-20 17:00:08 EXEC TRACE - Mediaplayer@obj15 processes signal:start
+2017-04-20 17:00:08 EXEC TRACE - Mediaplayer@obj15 leaves state:Paused
+2017-04-20 17:00:08 EXEC TRACE - Mediaplayer@obj15 uses transition:pause_started_state
+2017-04-20 17:00:08 USER  INFO - Mediaplayer in Pausing-Starting state
+2017-04-20 17:00:08 EXEC TRACE - Mediaplayer@obj15 enters state:Started
+2017-04-20 17:00:08 EXEC TRACE - Lamp@obj16 processes signal:LampOn
+2017-04-20 17:00:08 EXEC  WARN - A signal arrived to model object Lamp@obj16 but it was not processed by the object's state machine. The signal was: signal:LampOn
+2017-04-20 17:00:12 EXEC TRACE - Mediaplayer@obj15 processes signal:pause
+2017-04-20 17:00:12 EXEC TRACE - Mediaplayer@obj15 leaves state:Started
+2017-04-20 17:00:12 EXEC TRACE - Mediaplayer@obj15 uses transition:Pausing_state
+2017-04-20 17:00:12 USER  INFO - Mediaplayer in Pausing state
+2017-04-20 17:00:12 EXEC TRACE - Mediaplayer@obj15 enters state:Paused
+2017-04-20 17:00:12 EXEC TRACE - Lamp@obj16 processes signal:Lampause
+2017-04-20 17:00:12 EXEC  WARN - A signal arrived to model object Lamp@obj16 but it was not processed by the object's state machine. The signal was: signal:Lampause
+2017-04-20 17:00:13 EXEC TRACE - Mediaplayer@obj15 processes signal:stop
+2017-04-20 17:00:13 EXEC TRACE - Mediaplayer@obj15 leaves state:Paused
+2017-04-20 17:00:13 EXEC TRACE - Mediaplayer@obj15 uses transition:pause_stopped_state
+2017-04-20 17:00:13 USER  INFO - Mediaplayer in Pausing-Stopped state
+2017-04-20 17:00:13 EXEC TRACE - Mediaplayer@obj15 enters state:Stopped
+2017-04-20 17:00:13 EXEC TRACE - Lamp@obj16 processes signal:Lamps
+2017-04-20 17:00:13 EXEC TRACE - Lamp@obj16 leaves state:pau
+2017-04-20 17:00:13 EXEC TRACE - Lamp@obj16 uses transition:Switchstop
+2017-04-20 17:00:13 EXEC TRACE - Lamp@obj16 enters state:Off
+2017-04-20 17:00:16 EXEC TRACE - Mediaplayer@obj15 processes signal:prepareAsyn
+2017-04-20 17:00:16 EXEC TRACE - Mediaplayer@obj15 leaves state:Stopped
+2017-04-20 17:00:16 EXEC TRACE - Mediaplayer@obj15 uses transition:stopped_preparing_state
+2017-04-20 17:00:16 USER  INFO - Mediaplayer in prepareasync state
+2017-04-20 17:00:16 EXEC TRACE - Mediaplayer@obj15 enters state:Preparing
+2017-04-20 17:00:16 EXEC TRACE - Mediaplayer@obj15 processes signal:ready
+2017-04-20 17:00:16 EXEC TRACE - Mediaplayer@obj15 leaves state:Preparing
+2017-04-20 17:00:16 EXEC TRACE - Mediaplayer@obj15 uses transition:Ready_state
+2017-04-20 17:00:16 USER  INFO - Mediaplayer in Ready state
+2017-04-20 17:00:16 EXEC TRACE - Mediaplayer@obj15 enters state:Prepared
